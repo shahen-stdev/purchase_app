@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "purchase_api"
+version = "0.1"
+description = "Customer purchase api"
+authors = ["shahen <author@email.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8.6"
+fastapi = "^0.73.0"
+SQLAlchemy = "^1.4.31"
+uvicorn = "^0.17.1"
+sqlalchemy-stubs = "^0.4"
+pydantic = {extras = ["email"], version = "^1.9.0"}
+
+[tool.poetry.dev-dependencies]
+nitpick = "^0.27.0"
+wemake-python-styleguide = "^0.15.3"
+mypy = "^0.910"
+tox = "^3.24.3"
+pytest = "^6.2.5"
+pytest-cov = "^2.12.1"
+alembic = "^1.7.1"
+
+[tool.poetry.extras]
+lint = ["pylint"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
